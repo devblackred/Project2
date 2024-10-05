@@ -12,7 +12,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - sub-d
+      - project-subnet-private2-us-east-1b
   wordpress:
     depends_on:
       - db
