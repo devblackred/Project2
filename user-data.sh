@@ -13,9 +13,9 @@ curl -L https://github.com/docker/compose/releases/latest/download/docker-compos
 chmod +x /usr/local/bin/docker-compose
 mv /usr/local/bin/docker-compose /bin/docker-compose
 
-curl -sL https://raw.githubusercontent.com/devblackred/Project2-Compass/main/docker-compose.yml --output /home/ec2-user/docker-compose.yml
+curl -sL https://raw.githubusercontent.com/devblackred/Project2/main/docker-compose.yml --output /home/ec2-user/docker-compose.yml
 
-mkdir -p /efs//var/www/html
+mkdir -p /efs/celio-munch/var/www/html
 
 sudo mount -t efs fs-00551b6438692354b.efs.us-east-1.amazonaws.com:/ efs
 sudo chown ec2-user:ec2-user /efs
