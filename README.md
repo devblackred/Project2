@@ -66,41 +66,20 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
 1. Crie um arquivo chamado `docker-compose.yml` na sua instância EC2:
 
    ```yaml
-   version: '3'
-   services:
-     db:
-       image: mysql:8.0
-       restart: always
-       environment:
-         MYSQL_ROOT_PASSWORD: 'sua_senha_forte'
-         MYSQL_DATABASE: wordpress
-         MYSQL_USER: wordpress
-         MYSQL_PASSWORD: 'sua_senha_forte'
-       volumes:
-         - db_data:/var/lib/mysql
-     wordpress:
-       depends_on:
-         - db
-       image: wordpress:latest
-       restart: always
-       ports:
-         - "80:80"
-       environment:
-         WORDPRESS_DB_HOST: db
-         WORDPRESS_DB_USER: wordpress
-         WORDPRESS_DB_PASSWORD: 'sua_senha_forte'
-         WORDPRESS_DB_NAME: wordpress
-       volumes:
-         - wordpress_data:/var/lib/wordpress
-   volumes:
-     db_data:
-       driver: local
-     wordpress_data:
-       driver: local
-       driver_opts:
-         type: none
-         o: bind
-         device: /efs/wordpress
+  ```services:
+  wordpress:
+    image: wordpress:latest
+    volumes:
+      - /mnt/efs/wordpress:/var/www/html
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: wordpress
+      WORDPRESS_DB_USER: teste
+      WORDPRESS_DB_PASSWORD: teste123
+      WORDPRESS_DB_NAME: project_db
+      WORDPRESS_TABLE_CONFIG: wp_
    ```
 
 **Fase 5: Subindo a Aplicação WordPress**
