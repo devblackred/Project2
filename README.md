@@ -52,7 +52,7 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
 2. Execute o comando fornecido, substituindo  `file-system-id` pelo ID do seu EFS e `region` pela região da sua AWS:
 
    ```bash
-   sudo mount -t nfs -o vers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-xxxxxxxxxxxxxxxxx.efs.us-east-1.amazonaws.com:/ /efs/wordpress
+   sudo mount -t nfs -o vers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-xxxxxxxxxxxxxxxxx.efs.us-east-1.amazonaws.com:/ mnt/efs/wordpress
    ```
 
 3. Para tornar a montagem permanente, adicione a linha fornecida ao arquivo `/etc/fstab`, substituindo os valores conforme necessário:
