@@ -5,7 +5,7 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
 ### Por que essa solução é tão poderosa?
 
 * **Docker:** Empacota e isola o WordPress e o MySQL em contêineres, garantindo portabilidade e fácil gerenciamento.
-* **EFS (Elastic File System):** Armazena os arquivos do seu blog de forma persistente e compartilhada, evitando perda de dados e simplificando o escalonamento.
+* **EFS (Elastic File System):** Armazena os arquivos de forma persistente e compartilhada, evitando perda de dados e simplificando o escalonamento.
 * **Load Balancer:** Distribui o tráfego entre instâncias do WordPress, garantindo alta disponibilidade e tolerância a falhas.
 
 ### Pré-requisitos:
