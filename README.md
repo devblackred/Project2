@@ -119,7 +119,7 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
 
 **Fase 8: Verificando a Instalação**
 
-1. Acesse seu blog usando o endereço DNS do Load Balancer.
+1. Acesse o wordpress usando o endereço DNS do Load Balancer.
 2. Faça login no painel de administração do WordPress.
 3. Crie páginas, publique posts e faça upload de arquivos de mídia para testar
 
