@@ -123,7 +123,7 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
 2. Faça login no painel de administração do WordPress.
 3. Crie páginas, publique posts e faça upload de arquivos de mídia para testar
 
-**Parabéns!** Seu WordPress agora está pronto, com alta disponibilidade e sem medo de perder dados!
+**Parabéns!** Sua aplicação agora está pronta, com alta disponibilidade e sem medo de perder dados!
 
 ## Leitura Complementar:
 
