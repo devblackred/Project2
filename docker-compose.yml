@@ -6,7 +6,6 @@ services:
     ports:
       - 80:80
     restart: always
-    user: 1000:1000 
     environment:
       WORDPRESS_DB_HOST: wordpress.ct8i8oe2sycs.us-east-1.rds.amazonaws.com:3306
       WORDPRESS_DB_USER: teste
