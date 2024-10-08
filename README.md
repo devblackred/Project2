@@ -67,6 +67,7 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
 
    ```yaml
   ```services:
+  services:
   wordpress:
     image: wordpress:latest
     volumes:
@@ -75,11 +76,10 @@ Este guia prático te ensina a construir a criar uma aplicação WordPress na AW
       - 80:80
     restart: always
     environment:
-      WORDPRESS_DB_HOST: wordpress
+      WORDPRESS_DB_HOST: wordpress.ct8i8oe2sycs.us-east-1.rds.amazonaws.com:3306
       WORDPRESS_DB_USER: teste
       WORDPRESS_DB_PASSWORD: teste123
-      WORDPRESS_DB_NAME: project_db
-      WORDPRESS_TABLE_CONFIG: wp_
+      WORDPRESS_DB_NAME: wordpress
    ```
 
 **Fase 5: Subindo a Aplicação WordPress**
