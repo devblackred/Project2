@@ -14,5 +14,6 @@ mkdir /mnt/efs/wordpress
 chmod +rwx /mnt/efs/
 mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0d6ea7839554ca920.efs.us-east-1.amazonaws.com:/ /mnt/efs
 echo "fs-0d6ea7839554ca920.efs.us-east-1.amazonaws.com:/ /mnt/efs nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport,_netdev 0 0" >> /etc/fstab
+mysql --host="wordpress.ct8i8oe2sycs.us-east-1.rds.amazonaws.com" --user="teste" --password="teste123" --execute="CREATE DATABASE IF NOT EXISTS wordpress;"
 cd /home/ec2-user
 docker-compose up -d
